@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+
 
 public class PhoneBookManager {
     Node first;
@@ -18,9 +18,50 @@ public class PhoneBookManager {
         String info = "";
         Node current = first;
         while (current != null) {
-            info += current.firstName + " ";
+            info += current.firstName + " " + current.lastName + " " + current.address + " ";
             current = current.next;
         }
     return info;
+    }
+    public void modifyfirstName(String name, String newName){
+        Node current = first;
+        if(current.firstName.equalsIgnoreCase(name)) {
+            current.firstName = newName;
+        }
+        while(current.next != null){
+            current = current.next;
+            if(current.firstName.equalsIgnoreCase(name)){
+                current.firstName = newName;
+                break;
+            }
+        }
+    }
+    public void modifylastName(String name, String newName){
+        Node current = first;
+        if(current.firstName.equalsIgnoreCase(name)) {
+            current.lastName = newName;
+        } else {
+            while(current.next != null){
+                current = current.next;
+                if(current.firstName.equalsIgnoreCase(name)) {
+                    current.lastName = newName;
+                    break;
+                }
+            }
+        }
+    }
+    public void modifyAddress(String name, String address){
+        Node current = first;
+        if(current.firstName.equalsIgnoreCase(name)) {
+            current.address = address;
+        } else {
+            while(current.next != null){
+                current = current.next;
+                if(current.firstName.equalsIgnoreCase(name)) {
+                    current.address = address;
+                    break;
+                }
+            }
+        }
     }
 }
