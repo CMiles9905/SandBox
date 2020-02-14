@@ -6,6 +6,7 @@ public class Node {
     public String phoneNumber;
     public Node next;
     public Node() {
+    //Constructor for a null node
         this.firstName = null;
         this.lastName = null;
         this.address = null;
@@ -13,6 +14,7 @@ public class Node {
         this.phoneNumber = null;
         this.next = null;
     }
+    //Constructor for the last node in a linked list
     public Node(String firstName, String lastName, String address, String city,
                 String phoneNumber){
         this.firstName = firstName;
@@ -22,6 +24,7 @@ public class Node {
         this.phoneNumber = phoneNumber;
         this.next = null;
     }
+    //Constructor for a node with a next node
     public Node(String firstName, String lastName, String address, String city,
                 String phoneNumber, Node next){
         this.firstName = firstName;

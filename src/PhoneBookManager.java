@@ -121,7 +121,6 @@ public class PhoneBookManager {
         {
             if(current.next!=null) current = current.next;
             else return;
-            System.out.println("WHAT");
         }
         Node temp, after;
         temp = current.next;
